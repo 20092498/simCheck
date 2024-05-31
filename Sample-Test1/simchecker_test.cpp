@@ -43,3 +43,11 @@ TEST_F(simCheckerFixture, AnsShortdiffLenTest) {
 
 	EXPECT_EQ(ret, 39);
 }
+
+TEST_F(simCheckerFixture, TooLongdiffLenTest) {
+	string user = "ABCDEFGHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	sim.setAns(ans);
+	int ret = sim.lengthCheck(user);
+
+	EXPECT_EQ(ret, 0);
+}

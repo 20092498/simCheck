@@ -12,6 +12,9 @@ public:
 
 		int diff = std::abs(ansLen - userLen);
 
+		if (diff >= 20)
+			return 0;
+
 		if (diff == 0)
 			return 60;
 
